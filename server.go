@@ -19,7 +19,7 @@ type Server struct {
 // Monitor is used to start a stream of HardwareStats
 func (s *Server) Monitor(req *hardwaremonitoring.EmptyRequest, stream hardwaremonitoring.HardwareMonitor_MonitorServer) error {
 	// Start a ticker that executes each 2 seconds
-	timer := time.NewTicker(2 * time.Second)
+	timer := time.NewTicker(1 * time.Second)
 
 	for {
 		select {
