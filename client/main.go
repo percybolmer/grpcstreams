@@ -34,7 +34,7 @@ func main() {
 	}
 	// Create a timer to cancel
 	stop := time.NewTicker(7 * time.Second)
-	// Itterate stream
+	// Iterate stream
 	for {
 		select {
 		case <-stop.C:
@@ -50,7 +50,7 @@ func main() {
 			if err != nil {
 				panic(err)
 			}
-			fmt.Println("New Hardware state receieved")
+			fmt.Println("New Hardware state received")
 			fmt.Println("CPU Usage: ", res.Cpu)
 			fmt.Println("Memory Used: ", res.MemoryUsed)
 			fmt.Println("Memory Free: ", res.MemoryFree)
